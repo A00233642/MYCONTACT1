@@ -9,6 +9,12 @@ import UIKit
 
 class AddressBookTableViewController: UITableViewController {
     
+    
+    
+    
+    
+    
+    
     let dataSource = ContactPersonDataSource()
 
     override func viewDidLoad() {
@@ -94,5 +100,17 @@ class AddressBookTableViewController: UITableViewController {
        
     }
     
+    @IBAction func cancel(NewContact segue: UIStoryboardSegue){
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
+    @IBAction func save(SaveSegue segue:UIStoryboardSegue){
+        let source =  segue.source as! AddNewContactTableViewController
+        let newContact = source.contact
+        dataSource.addContact(contact: newContact!)
+        tableView.reloadData()
+        dismiss(animated: true, completion: nil)
+    }
 
 }

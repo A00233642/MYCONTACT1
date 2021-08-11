@@ -52,7 +52,13 @@
                             <outlet property="delegate" destination="pgg-hu-alR" id="EYc-uQ-gLr"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="NaF-bs-XeX"/>
+                    <navigationItem key="navigationItem" id="NaF-bs-XeX">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="h3c-Iz-Nag">
+                            <connections>
+                                <segue destination="XfH-bS-Q4j" kind="presentation" identifier="AddNewContactSegue" id="oSw-zh-09S"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e0z-8Z-kE7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -140,6 +146,96 @@
             </objects>
             <point key="canvasLocation" x="871" y="100"/>
         </scene>
+        <!--Add New Contact Table View Controller-->
+        <scene sceneID="vfL-8T-Pov">
+            <objects>
+                <tableViewController id="bu2-i1-GpY" customClass="AddNewContactTableViewController" customModule="MYCONTACT1" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="5Ir-CI-got">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Enter Contact Information" footerTitle="Press Cancel" id="ig0-Zk-6Tj">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="sms-jj-gZ2">
+                                        <rect key="frame" x="0.0" y="49.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sms-jj-gZ2" id="Zlg-Z1-zu8">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter first Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Mdf-v2-Rdc">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" smartDashesType="no"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="J1b-rJ-1rm">
+                                        <rect key="frame" x="0.0" y="93" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J1b-rJ-1rm" id="Hkl-85-urS">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Last Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="GzH-Pv-rRP">
+                                                    <rect key="frame" x="20" y="4" width="374" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" spellCheckingType="no"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Ert-Ps-8yb">
+                                        <rect key="frame" x="0.0" y="136.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ert-Ps-8yb" id="Ibv-D5-9Vp">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter PhoneNumber" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="BsH-ry-cFM">
+                                                    <rect key="frame" x="20" y="5" width="374" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" spellCheckingType="no"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="bu2-i1-GpY" id="hU8-hs-iYG"/>
+                            <outlet property="delegate" destination="bu2-i1-GpY" id="g8N-Hm-w2u"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Kfk-A6-hTA">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="yzh-Ec-dvt">
+                            <connections>
+                                <segue destination="wjB-Nd-oPS" kind="unwind" identifier="CancelSegue" unwindAction="cancelWithNewContact:" id="7n0-3R-xGG"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="qPj-85-CR3">
+                            <connections>
+                                <segue destination="wjB-Nd-oPS" kind="unwind" identifier="SaveSegue" unwindAction="saveWithSaveSegue:" id="TCJ-2x-apW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="txtFirstName" destination="Mdf-v2-Rdc" id="Pgj-kV-XNh"/>
+                        <outlet property="txtLastName" destination="GzH-Pv-rRP" id="fnf-3d-1a3"/>
+                        <outlet property="txtPhoneNumber" destination="BsH-ry-cFM" id="a6h-dw-JPu"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oOJ-eA-W7m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="wjB-Nd-oPS" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1779.7101449275365" y="-620.75892857142856"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ms4-iM-Agy">
             <objects>
@@ -157,6 +253,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M3V-iL-XZg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-894.20289855072474" y="99.776785714285708"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Qvf-6S-gzp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XfH-bS-Q4j" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="e7e-ka-vjW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bu2-i1-GpY" kind="relationship" relationship="rootViewController" id="COI-u9-e4o"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JAd-Od-WVt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="869.56521739130437" y="-620.75892857142856"/>
         </scene>
     </scenes>
     <resources>
