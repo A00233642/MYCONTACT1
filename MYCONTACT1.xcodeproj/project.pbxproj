@@ -15,6 +15,7 @@
 		1568426126C3858E0011C9B1 /* ContactPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1568426026C3858E0011C9B1 /* ContactPerson.swift */; };
 		1568426326C3875A0011C9B1 /* ContactPersonDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1568426226C3875A0011C9B1 /* ContactPersonDataSource.swift */; };
 		1568426526C38D2B0011C9B1 /* AddressBookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1568426426C38D2B0011C9B1 /* AddressBookTableViewController.swift */; };
+		1568426726C392D10011C9B1 /* ContactDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1568426626C392D10011C9B1 /* ContactDetailsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		1568426026C3858E0011C9B1 /* ContactPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPerson.swift; sourceTree = "<group>"; };
 		1568426226C3875A0011C9B1 /* ContactPersonDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPersonDataSource.swift; sourceTree = "<group>"; };
 		1568426426C38D2B0011C9B1 /* AddressBookTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBookTableViewController.swift; sourceTree = "<group>"; };
+		1568426626C392D10011C9B1 /* ContactDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				1568424C26C384C90011C9B1 /* AppDelegate.swift */,
 				1568424E26C384C90011C9B1 /* SceneDelegate.swift */,
 				1568425226C384C90011C9B1 /* Main.storyboard */,
+				1568426626C392D10011C9B1 /* ContactDetailsTableViewController.swift */,
 				1568426426C38D2B0011C9B1 /* AddressBookTableViewController.swift */,
 				1568425526C384CC0011C9B1 /* Assets.xcassets */,
 				1568425726C384CC0011C9B1 /* LaunchScreen.storyboard */,
@@ -148,6 +151,7 @@
 				1568424D26C384C90011C9B1 /* AppDelegate.swift in Sources */,
 				1568424F26C384C90011C9B1 /* SceneDelegate.swift in Sources */,
 				1568426526C38D2B0011C9B1 /* AddressBookTableViewController.swift in Sources */,
+				1568426726C392D10011C9B1 /* ContactDetailsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
