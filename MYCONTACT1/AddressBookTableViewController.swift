@@ -11,6 +11,8 @@ class AddressBookTableViewController: UITableViewController {
 
     
     let dataSource = ContactPersonDataSource()
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,9 @@ class AddressBookTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
          self.navigationItem.leftBarButtonItem = self.editButtonItem
+       
+        print(dataSource.contactURL)
+        
     }
 
     // MARK: - Table view data source
@@ -109,6 +114,7 @@ class AddressBookTableViewController: UITableViewController {
         dataSource.addContact(contact: newContact!)
         tableView.reloadData()
         dismiss(animated: true, completion: nil)
+        
     }
 
 }

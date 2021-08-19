@@ -8,14 +8,25 @@
 import UIKit
 
 class ContactPersonDataSource: NSObject {
-    let contacts = NSMutableArray()
+    var contacts = NSMutableArray()
     
-    override init() {
-        super.init()
-        loadContacts()
-    }
+    let contactURL: URL = {
+        
+        let documentDirectoriess = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentDirectory = documentDirectoriess.first!
+        return
+            documentDirectory.appendingPathComponent("ContactPerson.archive")
+        
+    }()
      
     
+    override init() {
+        do{
+      let data = try Data(contentsOf: contactURL)
+       contacts =   try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as! NSMutableArray        }catch{
+    }
+     
+    }
     func loadContacts(){
         let sample1 = ContactPerson()
         contacts.add(sample1)
@@ -24,6 +35,7 @@ class ContactPersonDataSource: NSObject {
     }
     func  addContact(contact c: ContactPerson){
         contacts.add(c)
+        save()
     }
     func countOfContacts () -> Int {
         return contacts.count
@@ -34,14 +46,27 @@ class ContactPersonDataSource: NSObject {
     
     func deleteContact(at index:Int){
         contacts.removeObject(at: index)
-      //   saveContacts()
+         save()
     }
     func moveContacts(from fromIndex:Int, to toIndex: Int){
         let fromContact = contactAtIndex(index: fromIndex)
         let toContact = contactAtIndex(index: toIndex)
         contacts.replaceObject(at: fromIndex, with: toContact)
         contacts.replaceObject(at: toIndex, with: fromContact)
-       // saveContacts()
+         save()
+    }
+    
+    func save() -> Bool{
+        do {
+        let data = try NSKeyedArchiver.archivedData(withRootObject: contacts, requiringSecureCoding: false)
+          try  data.write(to: contactURL)
+        }catch{
+            return false
+        
+        }
+        
+        print("data saved")
+        return true
     }
     
     }
