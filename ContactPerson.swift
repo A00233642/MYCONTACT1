@@ -22,23 +22,26 @@ class ContactPerson: NSObject, NSCoding {
         
     }
     
+    //Define attribute firstName, lastName, phoneNumber
     var firstName : String!
     var lastName : String!
     var  phoneNumber : String!
     
+    //create initializer
     override init() {
         firstName = "Taiwo"
         lastName = "Akintunde"
         phoneNumber = "+74567890"
-        super.init()
+        super.init() //to run the fuction
     }
     
+    //initializer
     init(withFirstName first:String, lastName last:String, phoneNumber number:String) {
         
         firstName = first
         lastName = last
         phoneNumber = number
-        super.init()
+        super.init() //to run the init method 
     }
     
     
