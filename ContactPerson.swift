@@ -7,7 +7,21 @@
 
 import UIKit
 
-class ContactPerson: NSObject {
+class ContactPerson: NSObject, NSCoding {
+    func encode(with coder: NSCoder) {
+        coder.encode(firstName, forKey: "firstName")
+        coder.encode(lastName, forKey: "lastName")
+        coder.encode(phoneNumber, forKey: "phoneNumber")
+    }
+    
+    required init?(coder: NSCoder) {
+        firstName = coder.decodeObject(forKey: "firstName") as! String
+        lastName = coder.decodeObject(forKey: "lastName") as! String
+        phoneNumber = coder.decodeObject(forKey: "phoneNumber") as! String
+        
+        
+    }
+    
     var firstName : String!
     var lastName : String!
     var  phoneNumber : String!
