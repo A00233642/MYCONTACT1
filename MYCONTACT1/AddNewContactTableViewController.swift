@@ -9,7 +9,7 @@ import UIKit
 
 class AddNewContactTableViewController: UITableViewController {
 
-    
+    //outlet for each label
     @IBOutlet weak var txtFirstName: UITextField!
     
     @IBOutlet weak var txtLastName: UITextField!
